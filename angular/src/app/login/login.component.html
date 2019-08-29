@@ -1,0 +1,14 @@
+<form #questionForm="ngForm"  (ngSubmit)="onSubmit(questionForm)">
+    <div class="form-group">
+      <input type="text" class="form-control" id="login" name="login"  
+      ngModel
+      #contentField="ngModel" 
+      (blur)='checkLogin($event)'
+      (ngModelChange)='clearLoginError()'
+      required>
+    </div>
+   
+    {{errorLogin}}
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
